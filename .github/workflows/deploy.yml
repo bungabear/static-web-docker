@@ -1,8 +1,14 @@
 name: docker build
+
+permissions:
+  contents: read
+  packages: write
+  
 on:
   push:
     branches:
     - release
+    
 jobs:
   build:
     name: build and push
